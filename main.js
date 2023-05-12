@@ -12,12 +12,9 @@ Trasformare la stringa foto in una immagine effettiva
 BONUS 2: Organizzare i singoli membri in card/schede
 */
 
-// Wayne Barnett	Founder & CEO	wayne-barnett-founder-ceo.jpg
-// Angela Caroll	Chief Editor	angela-caroll-chief-editor.jpg
-// Walter Gordon	Office Manager	walter-gordon-office-manager.jpg
-// Angela Lopez	Social Media Manager	angela-lopez-social-media-manager.jpg
-// Scott Estrada	Developer	scott-estrada-developer.jpg
-// Barbara Ramos	Graphic Designer	barbara-ramos-graphic-designer.jpg
+
+let txt;
+const elCard = document.getElementById("container");
 
 const myTeam = [
     {
@@ -55,14 +52,23 @@ const myTeam = [
 // console.log(myTeam.nome);
 
 for(let i = 0; i < myTeam.length; i++){
-    let objectIesimo = myTeam[i];
-    // console.log(objectIesimo);
+    let membroTeam = myTeam[i];
+    // console.log(`Nome: ${membroTeam.nome}`);
+    // console.log(`Ruolo: ${membroTeam.ruolo}`);
+    // console.log(`Foto: ${membroTeam.foto}`);
 
 
     // visualizzare solo una specifica proprietà
     // console.log(objectIesimo.nome);
 
-    for (let key in objectIesimo){
-        console.log(objectIesimo[key]);
+    for (let key in membroTeam){
     }
+    let card = `<div class='col'> 
+<img src="img/${membroTeam.foto}">
+</img>
+<h3>${membroTeam.nome}</h3>
+<span>${membroTeam.ruolo}</span>
+</div>`;
+
+elCard.innerHTML += card
 }
