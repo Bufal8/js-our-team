@@ -21,35 +21,48 @@ BONUS 2: Organizzare i singoli membri in card/schede
 
 const myTeam = [
     {
-        "Nome" : "Wayne Barnett",
-        "Ruolo" : "Founder & CEO",
-        "Foto" : "wayne-barnett-founder-ceo.jpg"
+        "nome" : "Wayne Barnett",
+        "ruolo" : "Founder & CEO",
+        "foto" : "wayne-barnett-founder-ceo.jpg"
     },
     {
-        "Nome" : "Angela Caroll",
-        "Ruolo" : "Chief Editor",
-        "Foto" : "angela-caroll-chief-editor.jpg"
+        "nome" : "Angela Caroll",
+        "ruolo" : "Chief Editor",
+        "foto" : "angela-caroll-chief-editor.jpg"
     },
     {
-        "Nome" : "Walter Gordon",
-        "Ruolo" : "Office Manager",
-        "Foto" : "walter-gordon-office-manager.jpg"
+        "nome" : "Walter Gordon",
+        "ruolo" : "Office Manager",
+        "foto" : "walter-gordon-office-manager.jpg"
     },
     {
-        "Nome" : "Angela Lopez",
-        "Ruolo" : "Social Media Manager",
-        "Foto" : "angela-lopez-social-media-manager.jpg"
+        "nome" : "Angela Lopez",
+        "ruolo" : "Social Media Manager",
+        "foto" : "angela-lopez-social-media-manager.jpg"
     },
     {
-        "Nome" : "Scott Estrada",
-        "Ruolo" : "Developer",
-        "Foto" : "scott-estrada-developer.jpg"
+        "nome" : "Scott Estrada",
+        "ruolo" : "Developer",
+        "foto" : "scott-estrada-developer.jpg"
     },
     {
-        "Nome" : "Barbara Ramos",
-        "Ruolo" : "Graphic Designer",
-        "Foto" : "barbara-ramos-graphic-designer.jpg"
+        "nome" : "Barbara Ramos",
+        "ruolo" : "Graphic Designer",
+        "foto" : "barbara-ramos-graphic-designer.jpg"
     }
 ];
 
-console.log(myTeam);
+// console.log(myTeam.nome);
+
+for(let i = 0; i < myTeam.length; i++){
+    let objectIesimo = myTeam[i];
+    // console.log(objectIesimo);
+
+
+    // visualizzare solo una specifica proprietà
+    // console.log(objectIesimo.nome);
+
+    for (let key in objectIesimo){
+        console.log(objectIesimo[key]);
+    }
+}
